@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("./asset/slkscr.ttf") format("truetype");
+}
+
+body {
+    background-image: url(./asset/canvas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "MyCustomFont", sans-serif;
+    margin :0 ;
+    padding :0 ;
+    zoom: 1.25;
+    
+}
+.HeadBox{
+    background-color: rgba(94, 13, 194, 0.5);
+    border-bottom: 10px double rgb(255, 5, 242);
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+#Head1{
+    font-size: 50px;
+    margin-left: 20px;
+    display: inline;
+}
+.button-container {
+    margin-top: 5px;
+    float: right;
+    margin-right: 20px;
+    display: inline;
+}
+#button {
+    background-color: #f0f0f000;
+    border: 2px solid rgb(255, 5, 242);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+#buttonsheep {
+    background-color: #f0f0f000;
+    border: 2px solid rgb(255, 5, 242);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.img {
+    width: 32px; 
+    height: 32px; 
+    vertical-align: middle;
+}
+#soundimg{
+    src:url(./asset/sound1.png);
+}
+#sound{
+    align-items: center;
+}
+#char{
+    position: absolute;
+}
+#game{
+    zoom: 1.25;
+    /*position: relative;*/
+    color:white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#start{
+    font-family: "MyCustomFont", sans-serif;
+    background-image: linear-gradient(to bottom ,rgba(118, 19, 189, 0.9),rgba(244, 255, 31, 0.5));
+    border-radius: 5px;
+    border: 1px solid white;
+    position: absolute;
+    padding: 50px;
+    color:rgba(94, 13, 194,0.75) ;
+    text-align: center;
+}
+#end{
+    font-family: "MyCustomFont", sans-serif;
+    background-image:  url('./asset/star.png');
+    display: none;
+    background-image: linear-gradient(to bottom ,rgb(250, 255, 149),rgba(231, 198, 255, 0.5));
+    border-radius: 5px;
+    border: 1px solid white;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:rgba(94, 13, 194,0.75) ;
+    text-align: center;
+}
+#stbtn{
+    font-family: "MyCustomFont", sans-serif;
+    border: 5px solid white;
+    border-radius: 10px;
+    font-size: 75px;
+    font-weight: bold;
+    background-color: #ffffff55;
+    color:rgba(94, 13, 194,0.75) ;
+    padding:5px;
+}
+#butn{
+    font-family: "MyCustomFont", sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    background-color:rgba(255, 255, 255, 0.462);
+    color:rgba(94, 13, 194,0.75) ;
+    padding:5px;
+}
+#contain{
+    display: flex;
+    justify-content: center;
+    
+
+}
+#Head2{ 
+    margin-right: 20px;
+    position: absolute;
+}
+#gameCanvas{
+    border: 3px solid rgb(255, 255, 255);
+    background-image: url(./asset/background.png);
+    display: block;
+    border-radius: 5px;
+
+}
+.res{
+
+    font-size: 13px;
+    color:white;
+    text-align: center;
+}
+
+#anykey{
+    text-align: center;
+    color: white;
+}
+
+.bulr{
+    filter: blur(2px);
+}

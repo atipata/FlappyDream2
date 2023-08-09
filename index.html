@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlappyDream</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="shortcut icon" type="image/png" href="asset/sheepicon.png" >
+</head>
+
+<body>
+    <header class="HeadBox">
+        <h1 id="Head1">  FlappyDream</h1>
+        <div class="button-container">
+            <button id="button" >
+                <img src="asset/sound1.png" class="img"id="soundimg">
+            </button>
+        </div>
+
+        <div class="button-container">
+            <button id="buttonsheep" >
+                <img src="asset/sheepicon.png" class="img" >
+            </button>
+        </div>
+    </header> 
+
+    <div id="game"> 
+        <div id="contain">
+            <h2  id="Head2"> Score: <span id="point"></h2>
+            <canvas id="gameCanvas" width="640" height="320"></canvas>
+        </div>
+
+        <div id="start">
+            <button id="stbtn">START</button>
+            <p class="res">Press "S" to start</p>
+        </div>
+
+        <div id="end">
+            <h1>!GAME OVER!</h1>
+            <h3>score: <span id="endscore"></span></h1>
+            <h3>best : <span id="bestscore"></span></h1>
+            <button id="butn">Restart</button>
+            <p class="res">Press "R" to restart</p>
+        </div>
+    </div>
+    <p id="anykey">"Spacebar" or "Clicked" </p>
+    <script src="app.js"></script>
+
+</body>
+</html>
+
