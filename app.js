@@ -47,7 +47,8 @@ let scorediv=document.getElementById('point');
 let rebtn = document.getElementById('butn');
 let stbtn = document.getElementById('stbtn');
 
-
+let plus=false;
+let plus2=false;
 
 
 let sound =true;
@@ -139,12 +140,17 @@ function sss() {
 }
 sbtn.addEventListener('click', sss);
 function plusscore(){
-    if(x==Math.floor(pipex+pipewidth)){
-        score++;    
+    if(x<pipex+pipewidth&&plus){
+        score++;  
+        plus=false;
+
     }
-    if(x==Math.floor(pipex2+pipewidth)){
-        score++;    
+    if(x<pipex+pipewidth&&plus2){
+        score++;  
+        plus2=false;
+
     }
+    
     scorediv.innerHTML=score;
  }
 function hitted(){
@@ -306,64 +312,66 @@ function loop(currentTime){
     ctx.drawImage(pipe,pipex2,pipey2-512-pipegap2,pipewidth,pipeheight);  
     ctx.drawImage(pipe,pipex2,pipey2+pipegap2,pipewidth,pipeheight);   
         //move
+        if(pipex<-64){
+            plus=true;
+            pipex=640;
+            if(pipegap>=70){pipegap-=1; }
+            pipey=Math.floor(Math.random() * (canvas.height));
+            if(pipey<pipegap){
+                pipey+=pipegap;
+            }else if(pipey>(canvas.height-pipegap)){
+                pipey-=pipegap;
+            }
+            
+        }
+        if(pipex2<-64){
+            pipex2=640;
+            plus2=true;
+            if(pipegap2>=70){ pipegap2-=2;}
+            pipey2=Math.floor(Math.random() * (canvas.height));
+            if(pipey2<pipegap2){
+                pipey2+=pipegap2;
+            }else if(pipey2>(canvas.height-pipegap2)){
+                pipey2-=pipegap2;
+            }
+        }
+    
+        if(sx<= -640){
+            sx=640;
+        }if(sx2<= -640){
+            sx2=640;
+        }
+    
+        if(mx<=-640){
+            mx=640;
+        }if(mx2<= -640){
+            mx2=640;
+        }
+        //collisionCheck
+        if(hitted()){
+            endmenu();
+            return;
+        }
+        plusscore();
+        //sheepFly
+        
+        //console.log(velo);
+        if(velo>0){
+            sheep.src="asset/sheep2.PNG";
+        }else{
+            sheep.src="asset/sheep1.PNG";
+        }
     
     lastUpdateTime = currentTime;
     }
     pipex-=1.5;
+    pipex2-=1.5;
     mx-=0.2;
     mx2-=0.2;
     sx-=0.1;
     sx2-=0.1;
-    if(pipex<-64){
-        
-        pipex=640;
-        if(pipegap>=70){pipegap-=1; }
-        pipey=Math.floor(Math.random() * (canvas.height));
-        if(pipey<pipegap){
-            pipey+=pipegap;
-        }else if(pipey>(canvas.height-pipegap)){
-            pipey-=pipegap;
-        }
-        
-    }
-    pipex2-=1.5;
-    if(pipex2<-64){
-        pipex2=640;
-        if(pipegap2>=70){ pipegap2-=2;}
-        pipey2=Math.floor(Math.random() * (canvas.height));
-        if(pipey2<pipegap2){
-            pipey2+=pipegap2;
-        }else if(pipey2>(canvas.height-pipegap2)){
-            pipey2-=pipegap2;
-        }
-    }
-
-    if(sx<= -640){
-        sx=640;
-    }if(sx2<= -640){
-        sx2=640;
-    }
-
-    if(mx<=-640){
-        mx=640;
-    }if(mx2<= -640){
-        mx2=640;
-    }
-    //collisionCheck
-    if(hitted()){
-        endmenu();
-        return;
-    }
-    plusscore();
-    //sheepFly
     velo+=acc;
     y+=velo;
-    //console.log(velo);
-    if(velo>0){
-        sheep.src="asset/sheep2.PNG";
-    }else{
-        sheep.src="asset/sheep1.PNG";
-    }
     requestAnimationFrame(loop);
 
 }
