@@ -361,14 +361,14 @@ function loop(currentTime){
         }else{
             sheep.src="asset/sheep1.PNG";
         }
-        pipex-=1.5 * 10;
-        pipex2-=1.5 * 10;
-        mx-=0.2 * 10;
-        mx2-=0.2 * 10;
-        sx-=0.1 * 10;
-        sx2-=0.1 * 10;
-        velo+=acc * 10;
-        y+=velo ;
+        pipex-=1.5 * 8;
+        pipex2-=1.5 * 8;
+        mx-=0.2 * 8;
+        mx2-=0.2 * 8;
+        sx-=0.1 * 8;
+        sx2-=0.1 * 8;
+        velo+=acc * 8;
+        y+=velo *8;
     lastUpdateTime = currentTime;
     }
     /*
