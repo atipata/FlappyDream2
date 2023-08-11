@@ -75,12 +75,12 @@ sheepbtn .addEventListener('click', baa);
 document.body.onkeyup = function(e){
     if(e.code=="Space"){
         jSound.play();
-        velo=shspeed ;
+        velo=shspeed  * 6;
     }
 }
 function handleScreenClick() {
     jSound.play();
-    velo=shspeed ;   
+    velo=shspeed  * 6;   
 }
 document.addEventListener('click', handleScreenClick);
 
@@ -243,7 +243,7 @@ function reset(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed;
+            velo=shspeed  * 6;
         }
     }
     
@@ -280,7 +280,7 @@ function hidconsole(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed;
+            velo=shspeed  * 6;
         }
     }
     loop();
@@ -361,13 +361,13 @@ function loop(currentTime){
         }else{
             sheep.src="asset/sheep1.PNG";
         }
-        pipex-=1.5 * 8;
-        pipex2-=1.5 * 8;
-        mx-=0.2 * 8;
-        mx2-=0.2 * 8;
-        sx-=0.1 * 8;
-        sx2-=0.1 * 8;
-        velo+=acc * 8;
+        pipex-=1.5 * 6;
+        pipex2-=1.5 * 6;
+        mx-=0.2 * 6;
+        mx2-=0.2 * 6;
+        sx-=0.1 * 6;
+        sx2-=0.1 * 6;
+        velo+=acc * 6;
         y+=velo ;
     lastUpdateTime = currentTime;
     }
