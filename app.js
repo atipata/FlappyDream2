@@ -368,7 +368,7 @@ function loop(currentTime){
         sx-=0.1 * deltaTime;
         sx2-=0.1 * deltaTime;
         velo+=acc * deltaTime;
-        y+=velo * deltaTime;
+        y+=velo ;
     lastUpdateTime = currentTime;
     }
     /*
