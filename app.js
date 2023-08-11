@@ -75,12 +75,12 @@ sheepbtn .addEventListener('click', baa);
 document.body.onkeyup = function(e){
     if(e.code=="Space"){
         jSound.play();
-        velo=shspeed * 0.25;
+        velo=shspeed * 0.5;
     }
 }
 function handleScreenClick() {
     jSound.play();
-    velo=shspeed  * 0.25; 
+    velo=shspeed  * 0.5; 
 }
 document.addEventListener('click', handleScreenClick);
 
@@ -103,7 +103,7 @@ function getScore() {
 highscore =getScore();
 //sound
 function playSound() {
-    var z=Math.floor(Math.random()* 0.25);
+    var z=Math.floor(Math.random()* 0.5);
     if(z===0){
         openSound.play();
         openSound.addEventListener('ended', function() {
@@ -243,7 +243,7 @@ function reset(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 0.25;
+            velo=shspeed * 0.5;
         }
     }
     
@@ -280,7 +280,7 @@ function hidconsole(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 0.25;
+            velo=shspeed * 0.5;
         }
     }
     loop();
