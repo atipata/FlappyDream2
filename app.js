@@ -75,12 +75,12 @@ sheepbtn .addEventListener('click', baa);
 document.body.onkeyup = function(e){
     if(e.code=="Space"){
         jSound.play();
-        velo=shspeed * 8;
+        velo=shspeed ;
     }
 }
 function handleScreenClick() {
     jSound.play();
-    velo=shspeed * 8;   
+    velo=shspeed ;   
 }
 document.addEventListener('click', handleScreenClick);
 
@@ -243,7 +243,7 @@ function reset(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 8;
+            velo=shspeed;
         }
     }
     
@@ -280,7 +280,7 @@ function hidconsole(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 8;
+            velo=shspeed;
         }
     }
     loop();
@@ -368,7 +368,7 @@ function loop(currentTime){
         sx-=0.1 * 8;
         sx2-=0.1 * 8;
         velo+=acc * 8;
-        y+=velo * 8;
+        y+=velo ;
     lastUpdateTime = currentTime;
     }
     /*
