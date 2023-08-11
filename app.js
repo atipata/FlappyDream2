@@ -364,7 +364,7 @@ function loop(currentTime){
         pipex-=1.5 * 10;
         pipex2-=1.5 * 10;
         mx-=0.2 * 10;
-        mx2-=0.2 * 30;
+        mx2-=0.2 * 10;
         sx-=0.1 * 10;
         sx2-=0.1 * 10;
         velo+=acc * 10;
