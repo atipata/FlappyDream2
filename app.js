@@ -75,7 +75,7 @@ sheepbtn .addEventListener('click', baa);
 document.body.onkeyup = function(e){
     if(e.code=="Space"){
         jSound.play();
-        velo=shspeed * 1
+        velo=shspeed * 0.5
     }
 }
 function handleScreenClick() {
@@ -103,7 +103,7 @@ function getScore() {
 highscore =getScore();
 //sound
 function playSound() {
-    var z=Math.floor(Math.random()* 1);
+    var z=Math.floor(Math.random()* 0.5);
     if(z===0){
         openSound.play();
         openSound.addEventListener('ended', function() {
@@ -243,7 +243,7 @@ function reset(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 1;
+            velo=shspeed * 0.5;
         }
     }
     
@@ -280,7 +280,7 @@ function hidconsole(){
     document.body.onkeyup = function(e){
         if(e.code=="Space"){
             jSound.play();
-            velo=shspeed * 1;
+            velo=shspeed * 0.5;
         }
     }
     loop();
