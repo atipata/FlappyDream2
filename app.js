@@ -361,13 +361,13 @@ function loop(currentTime){
         }else{
             sheep.src="asset/sheep1.PNG";
         }
-        pipex-=1.5 * 30;
-        pipex2-=1.5 * 30;
-        mx-=0.2 * 30;
+        pipex-=1.5 * 10;
+        pipex2-=1.5 * 10;
+        mx-=0.2 * 10;
         mx2-=0.2 * 30;
-        sx-=0.1 * 30;
-        sx2-=0.1 * 30;
-        velo+=acc * 30;
+        sx-=0.1 * 10;
+        sx2-=0.1 * 10;
+        velo+=acc * 10;
         y+=velo ;
     lastUpdateTime = currentTime;
     }
